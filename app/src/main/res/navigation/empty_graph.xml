@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/empty_graph"
+    app:startDestination="@id/placeholderFragment">
+    <fragment
+        android:id="@+id/placeholderFragment"
+        android:name="androidx.fragment.app.Fragment" />
+</navigation>

@@ -2,6 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp.plugin)
+    alias(libs.plugins.kotlin.kapt)
+    id("kotlin-parcelize")
+    alias(libs.plugins.hilt.plugin)
+
 }
 
 android {
@@ -36,6 +41,7 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding=true
     }
 }
 
@@ -58,6 +64,12 @@ dependencies {
     implementation(libs.converter.gson)
 
     implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+
+    implementation(libs.glide)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

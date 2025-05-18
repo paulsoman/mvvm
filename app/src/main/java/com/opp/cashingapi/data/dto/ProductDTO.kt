@@ -1,5 +1,7 @@
 package com.opp.cashingapi.data.dto
 
+import com.opp.cashingapi.domain.entity.Product
+
 data class ProductDTO(
     val availabilityStatus: String,
     val brand: String,
@@ -24,3 +26,6 @@ data class ProductDTO(
     val warrantyInformation: String,
     val weight: Int
 )
+
+fun ProductDTO.toProduct(): Product =
+    Product(this.id, this.title, this.price, this.thumbnail, this.description)

@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CashingAPI"
 include(":app")
+include(":products")
+include(":core")

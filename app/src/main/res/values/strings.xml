@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CashingAPI</string>
+    <string name="price_format">Price: %1$s</string>
 </resources>
