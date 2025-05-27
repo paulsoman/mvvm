@@ -43,10 +43,13 @@ android {
         compose = true
         dataBinding=true
     }
+    sourceSets {
+        getByName("main").java.srcDirs("src/main/kotlin")
+    }
 }
 
 dependencies {
-
+    implementation(libs.material)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -70,6 +73,10 @@ dependencies {
 
     implementation(libs.glide)
 
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
+
+    implementation(libs.glide)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
